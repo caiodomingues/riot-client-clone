@@ -1,0 +1,382 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #e6e6e6;
+  font-family: "Mark", sans-serif;
+}
+
+main {
+  height: 720px;
+  width: 1366px;
+  display: flex;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.32);
+  background-color: #f9f9f9;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.logo {
+  height: 36px;
+  width: 36px;
+}
+
+.splash-art {
+  object-fit: cover;
+  object-position: 65% center;
+  height: 100%;
+  width: auto;
+}
+
+form {
+  padding: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -1px;
+  margin-top: 64px;
+  margin-bottom: 32px;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+input {
+  background-color: rgb(237, 237, 237);
+  font-size: 16px;
+  padding: 8px;
+  padding-top: 24px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: background-color 0.15s ease-in-out;
+  font-family: "Mark", sans-serif;
+}
+
+input:hover {
+  background-color: rgb(230, 230, 230);
+  transition: background-color 0.15s ease-in-out;
+}
+
+input:focus,
+input:active {
+  border: 1px solid black;
+}
+
+input.error,
+input.error:active,
+input.error:focus {
+  background-color: rgb(244, 227, 245);
+  border: 2px solid rgb(235, 191, 239);
+}
+
+.input-group > label.error {
+  color: rgb(190, 41, 204);
+}
+
+.input-group > label {
+  margin-top: -35px;
+  margin-left: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.35);
+  transition: all 0.1s ease-in-out;
+  letter-spacing: -1px;
+  user-select: none;
+}
+
+.input-group > input:focus ~ label,
+.input-group > input:active ~ label,
+.has-content {
+  margin-top: -45px !important;
+  margin-bottom: 15px !important;
+  font-size: 10px !important;
+  margin-left: 7.5px !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.cogs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 92.5%;
+  bottom: 65px;
+  background-color: #747376;
+  border-radius: 5px;
+  width: 35px;
+  height: auto;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.cogs img {
+  width: 30px;
+  height: 30px;
+}
+
+.question {
+  position: relative;
+  left: 80%;
+  top: 7.25%;
+  width: 19px;
+  height: auto;
+  opacity: 0.5;
+}
+
+.version {
+  position: relative;
+  left: 55%;
+  bottom: 20%;
+  text-decoration: none;
+  letter-spacing: 0px !important;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.social > div {
+  display: flex;
+  margin: 0 5px;
+  width: 33.33333%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.social > div:hover {
+  filter: brightness(0.92);
+}
+
+.facebook {
+  background-color: rgb(24, 119, 242);
+}
+
+.facebook > img {
+  width: 28px;
+  height: auto;
+  filter: invert(1);
+}
+
+.google {
+  border: 2px solid rgb(243, 243, 243);
+  background-color: #fff;
+}
+
+.google > img {
+  width: 18px;
+  height: auto;
+}
+
+.apple {
+  background-color: #000;
+}
+
+.apple > img {
+  filter: invert(1);
+  width: 24px;
+  height: auto;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.checkbox-group label {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -1px;
+  color: #00000050;
+}
+
+.control {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #bc252a;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background: #ededed;
+  border-radius: 3px;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #bc252a;
+}
+
+.control_indicator:after {
+  box-sizing: unset;
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+.control-checkbox .control_indicator:after {
+  left: 5px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+button {
+  margin-top: 100px;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+button > img {
+  margin: 0 4px;
+  margin-top: 7px;
+}
+
+button:disabled {
+  border: 2px solid rgb(220, 220, 220);
+  background-color: transparent;
+}
+
+button:enabled {
+  cursor: pointer;
+  border: 2px solid #bc252a;
+  background-color: #bc252a;
+}
+
+button:enabled > img {
+  margin-top: 5px;
+}
+
+button:active {
+  filter: brightness(0.9);
+}
+
+button:focus {
+  outline: none;
+}
+
+#link-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#link-content a {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #000;
+  opacity: 0.3;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+#link-content a:hover {
+  opacity: 1;
+}
+
+#error-message {
+  display: none;
+  color: rgb(190, 41, 204);
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 14px;
+  margin-top: 24px;
+  margin-bottom: -20px;
+}
+
+.warnings {
+  position: relative;
+  bottom: 100%;
+  left: 25px;
+  cursor: pointer;
+}
+
+.warnings div {
+  background-color: rgb(210, 54, 225);
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.warnings span {
+  position: relative;
+  color: #fff;
+  font-weight: 900;
+  font-size: 28px;
+  bottom: 37.5px;
+  left: 15.5px;
+}
+
+.link-git {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  text-decoration: none;
+  color: #000;
+  opacity: 0.5;
+  transition: all 0.1s ease-in-out;
+  font-weight: bold;
+}
+
+.link-git:hover {
+  opacity: 1;
+  transition: all 0.1s ease-in-out;
+}

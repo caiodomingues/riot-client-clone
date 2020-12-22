@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>League of Legends Client - Riot Games</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+  </head>
+  <body>
+    <main>
+      <div class="column w-30">
+        <img class="question" src="img/question.png" alt="Question mark" />
+        <form id="form">
+          <img class="logo" src="img/logo.png" alt="League of Legends logo" />
+          <h1>Fazer login</h1>
+          <div class="input-group">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              autocomplete="off"
+              autofocus
+            />
+            <label for="username">Nome de usuário</label>
+            <p id="error-message"></p>
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autocomplete="off"
+            />
+            <label for="password">Senha</label>
+          </div>
+          <div class="social">
+            <div class="facebook">
+              <img src="img/facebook.png" alt="Facebook logo" />
+            </div>
+            <div class="google">
+              <img src="img/google.png" alt="Google logo" />
+            </div>
+            <div class="apple">
+              <img src="img/apple.png" alt="Apple logo" />
+            </div>
+          </div>
+          <div class="checkbox-group">
+            <div class="control-group">
+              <label class="control control-checkbox">
+                Manter login
+                <input type="checkbox" name="remind" id="remind" />
+                <div class="control_indicator"></div>
+              </label>
+            </div>
+          </div>
+          <button type="submit" disabled id="submit">
+            <img src="img/inactive_arrow.png" alt="Arrow" id="button-img" />
+          </button>
+          <div id="link-content">
+            <a href="#">NÃO CONSEGUE INICIAR A SESSÃO?</a>
+            <a href="#">CRIAR CONTA</a>
+            <a href="#" class="version">V20.32.5</a>
+          </div>
+        </form>
+      </div>
+      <div class="column w-70">
+        <img class="splash-art" src="img/poppy.jpg" alt="Poppy splash art" />
+        <div class="cogs">
+          <img src="img/cogs.png" alt="Settings" />
+        </div>
+        <div class="warnings">
+          <div>&nbsp;</div>
+          <span>!</span>
+        </div>
+      </div>
+    </main>
+    <a
+      class="link-git"
+      href="http://github.com/caiodomingues"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Caio Domingues</a
+    >
+    <script src="js/index.js"></script>
+  </body>
+</html>
