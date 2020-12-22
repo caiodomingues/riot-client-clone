@@ -368,7 +368,6 @@ button:focus {
 .link-git {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
   text-decoration: none;
   color: #000;
   opacity: 0.5;
@@ -379,4 +378,15 @@ button:focus {
 .link-git:hover {
   opacity: 1;
   transition: all 0.1s ease-in-out;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  margin-top: 0;
+  color: #000;
+  opacity: 0.5;
+  font-weight: 600;
+  font-size: 14px;
 }
