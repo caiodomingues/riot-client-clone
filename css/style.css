@@ -396,3 +396,42 @@ button:focus {
   font-weight: 600;
   font-size: 14px;
 }
+
+
+@media screen and (max-width: 1370px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  
+  main {
+    width: 1280px;
+  }
+
+  .w-70, .w-30 {
+    width: 50%;
+  }
+
+  #info, .link-git {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .w-70 {
+    display: none;
+  }
+
+  .w-30 {
+    width: 100%;
+  }
+
+  main {
+    width: 320px;
+  }
+}
